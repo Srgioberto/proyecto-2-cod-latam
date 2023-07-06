@@ -4,6 +4,17 @@
 /* Importar aquí la font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,400&display=swap');
 
+*{
+  margin: 0;
+  padding: 0;
+  
+  }
+  
+  body{
+    font-family: 'Roboto', sans-serif;
+  
+  
+  }
 /* Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
 *  cuyos valores asigna por defecto el navegador.
 */
@@ -38,7 +49,7 @@ main {
 
 body {
   background-color: #fbfbfb;
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
   line-height: 1.2;
   width: 100%;
@@ -59,6 +70,12 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+}
+
+p.descripcion {
+  font-size: 18px;
+  font-weight: 300;
+  font-style: italic;
 }
 
 ul#menu {
@@ -105,6 +122,7 @@ article.presentacion {
 }
 
 a.btn {
+  font-style: italic;
   background-color: #01756c;
   color: #fbfbfb;
   padding: 12px;
@@ -113,6 +131,8 @@ a.btn {
 }
 
 article.hablemos {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
   background-color: #01756c;
   color: #fbfbfb;
   text-align: center;
@@ -122,12 +142,16 @@ article.hablemos {
 }
 
 h1 {
+  font-family: "Shrikhand",sans-serif;
   font-size: 36px;
   text-align: center;
+  font-weight: 400;
 }
 
 h2 {
+  font-family: "Shrikhand",sans-serif;
   font-size: 28px;
+  font-weight: 200;
 }
 
 p {
@@ -178,6 +202,12 @@ footer {
 
 @media (min-width: 1024px) {
 
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   h1 {
     font-size: 48px;
     text-align: left;
@@ -200,17 +230,22 @@ footer {
 
   }
 
+  article.hablemos {
+    max-width: 70%;
+  }
+
   div.iconos {
+    max-width: 500px;
     margin: 32px;
 
   }
 
   section#contacto  {
-    max-width: 50%;
     display: flex;
     flex-direction: column;
-    justify-items: ;
+    justify-content: center;
   }
+
 
   header {
     background-color: #fbfbfb;
