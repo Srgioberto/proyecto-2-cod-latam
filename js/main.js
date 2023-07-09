@@ -7,5 +7,3 @@ menuItems.forEach(function(item)    {
 
     });
 });
-
-
