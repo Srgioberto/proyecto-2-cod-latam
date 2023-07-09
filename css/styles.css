@@ -1,60 +1,41 @@
-/* En este archivo escriban su CSS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,900;1,400;1,900&display=swap");
 
-/* Fonts */
-/* Importar aquí la font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,400&display=swap');
-
-*{
-  margin: 0;
-  padding: 0;
-  
-  }
-  
-  body{
-    font-family: 'Roboto', sans-serif;
-  
-  
-  }
-/* Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
-*  cuyos valores asigna por defecto el navegador.
-*/
-
-/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* Para que el scrolleo en la one page sea suave */
   scroll-behavior: smooth;
 }
 
-/* Para quitar los puntos a los items de listas */
-ul {
-  list-style: none;
-}
-
-/* Para que los enlaces hereden el color de texto y no tengan subrayado */
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Este max-width es para que el contenido no se "estire" demasiado hacia los costados y
-*  el margin: auto; para tenerlo centrado fácilmente ;)
-*/
-main {
-  max-width: 1200px;
-  margin: auto;
-}
-
 body {
+  font-family: "Poppins", sans-serif;
   background-color: #fbfbfb;
-  font-family: "Roboto", sans-serif;
   font-size: 18px;
   line-height: 1.2;
   width: 100%;
   color: #0f0f0f;
   max-height: 500px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  max-width: 1200px;
+  margin: auto;
 }
 
 header {
@@ -73,8 +54,9 @@ header {
 }
 
 p.descripcion {
+  margin-top: 20px;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
 }
 
@@ -85,11 +67,14 @@ ul#menu {
 }
 
 li.menu-item {
-  padding: 16px;
+  margin: 0;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
 }
 
 section {
-  display: flexbox;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -100,7 +85,9 @@ section {
 
 section#inicio {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 section#contacto {
@@ -118,52 +105,65 @@ figure.presentacion-img img {
 }
 
 article.presentacion {
+  display: inline-block;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
 }
 
 a.btn {
-  font-style: italic;
+  display: inline-block;
+  flex-direction: row;
+  justify-content: center;
+  font-style: normal;
   background-color: #01756c;
   color: #fbfbfb;
   padding: 12px;
-  border-radius: 25px;
-  margin-top: 10px;
+  border-radius: 50px;
+  position: sticky;
 }
 
 article.hablemos {
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
   background-color: #01756c;
   color: #fbfbfb;
   text-align: center;
-  padding: 10px 20px;
+  padding: 20px;
   border-radius: 15px;
   margin-top: 70px;
+  font-style: italic;
+  margin: 40px 0px 0px 0px;
 }
 
 h1 {
-  font-family: "Shrikhand",sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 36px;
   text-align: center;
-  font-weight: 400;
+  font-weight: 900;
+  font-style: italic;
 }
 
 h2 {
-  font-family: "Shrikhand",sans-serif;
-  font-size: 28px;
-  font-weight: 200;
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  font-style: italic;
 }
 
-p {
-  margin: 16px 0px;
+p.footer {
+  margin: 0px;
+  padding: 0px;
 }
 
 img {
   max-width: 100%;
 }
+
 .iconos {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
 }
 
@@ -182,26 +182,9 @@ footer {
   color: #fbfbfb;
   margin-bottom: 0px;
 }
-/* Recomendaciones! 
-*  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
-*    "estilos generales". Una buena idea sería comenzar por el <body> ;)
-*
-*  - Recuerden que queremos evitar "repetir código", en CSS usando la cualidad de la herencia
-*    podemos setear ciertas propiedades en un elemento padre y dejar que sean heredadas (por ejemplo: font-size)
-*
-*  - Nadie sabe todas las propiedades CSS de memoria, si no saben como hacer algo no lo recuerdan, la respuesta
-*    pueden encontrarla buscando en la web algo como "CSS como hacer ... " o "propiedad css para hacer ..."
-*
-*  - Usen mucho las herramientas para desarrolladores del navegador para ir
-*    probando el CSS que escriben, resolver dudas y problemas.
-*
-*  - Paciencia, resiliencia y creatividad! No se desanimen, las primeras experiencias maquetando con HTML y CSS
-*    pueden ser frustrantes, pero estas habilidades se van desarrollando con la experiencia, es como aprender
-*    un trabajo manual, hacer una artesanía, tocar un instrumento musical... la práctica es todo!
-*/
+/* MEDIAQUERIES */
 
 @media (min-width: 1024px) {
-
   main {
     display: flex;
     flex-direction: column;
@@ -217,42 +200,39 @@ footer {
     font-size: 22px;
   }
 
-  section#inicio  {
+  section#inicio {
     flex-direction: row;
     justify-content: space-around;
     padding-top: 13%;
-
   }
 
-  article.presentacion  {
+  article.presentacion {
     width: 50%;
+    display: flex;
     text-align: left;
-
   }
 
   article.hablemos {
-    max-width: 70%;
+    max-width: 50%;
   }
 
   div.iconos {
     max-width: 500px;
     margin: 32px;
-
   }
 
-  section#contacto  {
+  section#contacto {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-
 
   header {
     background-color: #fbfbfb;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: row;
-    justify-content: space-between ;
+    justify-content: space-between;
     align-items: center;
     height: 90px;
     padding: 16px 0px;
@@ -263,13 +243,25 @@ footer {
     padding-left: 30px;
     padding-right: 20px;
   }
-
 }
 
 li.menu-item:hover,
 a.btn:hover {
   border-radius: 50px;
   background-color: rgba(136, 136, 136, 0.5);
-  transition: background-color 0.3s; ;
+  transition: background-color 0.3s;
 }
 
+li.menu-item:hover {
+  color: #01756c;
+}
+
+figure.presentacion-img {
+  width: 40%;
+  height: 40%;
+}
+
+a.btn {
+  display: inline-block;
+  max-width: fit-content;
+}
